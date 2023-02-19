@@ -17,7 +17,7 @@ export const posts = [
   },
   {
     id: 3,
-    title: "learn JS in 30 days",
+    title: "Learn JS in 30 days",
     img: "https://images.pexels.com/photos/1161547/pexels-photo-1161547.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ad optio magnam veniam nihil, quasi in architecto dignissimos rerum, soluta ipsa nobis eos mollitia eligendi adipisci possimus pariatur dolorem ea?",
     longDesc:
