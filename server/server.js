@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
-require("dotenv").config();
+// require("dotenv").config();
 require("./passport");
 
 const PORT = process.env.PORT || 3002;
@@ -16,7 +16,7 @@ app.use(
     maxAge: 24 * 60 * 60 * 1000, // 24 hours
   })
 );
-
+dotenv.config();
 app.use(passport.initialize());
 app.use(passport.session());
 
