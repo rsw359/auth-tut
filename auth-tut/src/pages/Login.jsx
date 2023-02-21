@@ -3,12 +3,16 @@ import Facebook from "../img/facebook.png";
 import Github from "../img/github.png";
 
 const Login = () => {
+  const google = () => {
+    window.open("http://localhost:3001/auth/google", "_self");
+  };
+
   return (
     <div className="login">
-      <h1 className="titleLogin">Choose a Login Method</h1>
+      <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="wrapper">
         <div className="left">
-          <div className="loginButton google">
+          <div className="loginButton google" onClick={google}>
             <img src={Google} alt="" className="icon" />
             Google
           </div>
@@ -28,8 +32,8 @@ const Login = () => {
           <div className="or">OR</div>
         </div>
         <div className="right">
-          <input type="text" className="username" />
-          <input type="password" className="password" />
+          <input type="text" className="username" placeholder="Username" />
+          <input type="password" className="password" placeholder="Password" />
           <button className="submit">Login</button>
         </div>
       </div>
