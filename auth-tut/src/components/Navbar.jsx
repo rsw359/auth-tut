@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import monkey from "./assets/monkey.jpg";
 
 const Navbar = ({ user }) => {
+  const logout = () => {
+    window.open("http://localhost:3001/auth/logout", "_self");
+  };
   return (
     <div className="navbar">
       <span className="logo">
@@ -13,12 +15,14 @@ const Navbar = ({ user }) => {
       {user ? (
         <ul className="list">
           <li className="list-item">
-            <img className="avatar" src={monkey} alt="" />
+            <img className="avatar" src={user.photos[0].value} alt="" />
           </li>
 
-          <li className="list-item">John Doe</li>
+          <li className="list-item">{user.displayName}</li>
 
-          <li className="list-item">Logout</li>
+          <li className="list-item" onClick={logout}>
+            Logout
+          </li>
         </ul>
       ) : (
         <Link to="/login" className="link">
