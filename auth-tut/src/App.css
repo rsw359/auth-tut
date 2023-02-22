@@ -171,12 +171,17 @@
 
 .google{
   background-color: #df4930;
+  cursor: pointer;
 }
 .facebook{
   background-color: #3b5998;
+  cursor: pointer;
+
 }
 .github{
   background-color: #333;
+  cursor: pointer;
+
 }
 
 .icon{
